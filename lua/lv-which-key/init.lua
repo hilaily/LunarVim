@@ -149,6 +149,7 @@ local mappings = {
         s = {"<cmd>TZBottom<cr>", "toggle status line"},
         t = {"<cmd>TZTop<cr>", "toggle tab bar"},
         z = {"<cmd>TZAtaraxis<cr>", "toggle zen"},
+        f = {"<cmd>NvimTreeToggle<cr>", "toggle nvim tree"},
     }
 }
 
