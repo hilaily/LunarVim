@@ -54,14 +54,14 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- telescope
-vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
 
 -- Comments
-vim.api.nvim_set_keymap("n", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<Leader>b/", ":CommentToggle<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("v", "<Leader>b/", ":CommentToggle<CR>", {noremap = true, silent = true})
 
 -- close buffer
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
@@ -72,12 +72,17 @@ vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.pr
 -- TODO create entire treesitter section
 
 local mappings = {
-    ["/"] = "Comment",
+    -- ["/"] = "Comment",
     ["c"] = "Close Buffer",
     ["e"] = "Explorer",
-    ["f"] = "Find File",
+    -- ["f"] = "Find File",
     ["h"] = "No Highlight",
     ["p"] = "Projects",
+    b = {
+        name = "+Buffer",
+        s = {"<cmd>w<cr>", "save"},
+        q = {"<cmd>q<cr>", "quit"},
+    },
     d = {
         name = "+Diagnostics",
         t = {"<cmd>TroubleToggle<cr>", "trouble"},
