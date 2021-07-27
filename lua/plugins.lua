@@ -88,6 +88,8 @@ return require("packer").startup(function(use)
 
     -- Zen Mode
     use {"Pocco81/TrueZen.nvim", opt = true}
+    -- Go plugin
+    use {"fatih/vim-go", opt=true}
 
 		-- Sane gx for netrw_gx bug
     -- use {"felipec/vim-sanegx"}
