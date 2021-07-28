@@ -73,7 +73,7 @@ vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.pr
 
 local mappings = {
     -- ["/"] = "Comment",
-    ["c"] = "Close Buffer",
+    -- ["c"] = "Close Buffer",
     ["e"] = "Explorer",
     -- ["f"] = "Find File",
     ["h"] = "No Highlight",
@@ -84,6 +84,8 @@ local mappings = {
         p = {"<cmd>bp<cr>", "previous buffer"},
         q = {"<cmd>q<cr>", "quit"},
         s = {"<cmd>w<cr>", "save"},
+        d = {"<cmd>BufferClose<cr>", "close buffer"},
+        z = {"<cmd>CommentToggle<CR>", "toggle comment"},
     },
     d = {
         name = "+Diagnostics",
@@ -106,6 +108,7 @@ local mappings = {
     f = {
         name = "+File",
         s = {"<cmd>w<cr>", "save file"},
+        t = {"<cmd>NvimTreeToggle<cr>", "toggle nvim tree"},
     },
     g = {
         name = "+Git",
@@ -162,7 +165,6 @@ local mappings = {
         s = {"<cmd>TZBottom<cr>", "toggle status line"},
         t = {"<cmd>TZTop<cr>", "toggle tab bar"},
         z = {"<cmd>TZAtaraxis<cr>", "toggle zen"},
-        f = {"<cmd>NvimTreeToggle<cr>", "toggle nvim tree"},
     }
 }
 
