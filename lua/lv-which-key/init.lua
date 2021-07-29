@@ -167,8 +167,8 @@ local mappings = {
     },
     t = {
         name = "+Test",
-        t = {"<cmd>TestNearest<cr>", "TestNearest"},
-        a = {"<cmd>TestSuite<cr>", "TestSuite"},
+        t = {"<cmd>TestNearest -v<cr>", "TestNearest"},
+        a = {"<cmd>TestSuite -v<cr>", "TestSuite"},
     },
 
     -- extras
