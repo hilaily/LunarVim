@@ -21,8 +21,10 @@ local function require_plugin(plugin)
             return true
         end
     end
-    --	print(ok, err, code)
     if ok then vim.cmd("packadd " .. plugin) end
+    if not ok then
+        print(ok, err, code)
+    end
     return ok, err, code
 end
 
@@ -89,9 +91,18 @@ return require("packer").startup(function(use)
     -- Zen Mode
     use {"Pocco81/TrueZen.nvim", opt = true}
     -- Go plugin
-    use {"fatih/vim-go", opt=true}
+    -- use {"fatih/vim-go", run= ":GoUpdateBinaries"}
+    -- use {"fatih/vim-go", run = ":GoUpdateBinaries", ft = "go"}
+    -- require_plugin("fatih/vim-go")
+    -- debuger
+    use {"puremourning/vimspector", opt=true}
+    require_plugin("vimspector")
 
-		-- Sane gx for netrw_gx bug
+    -- vim test
+    use {"vim-test/vim-test", opt=true}
+    require_plugin("vim-test")
+
+    -- Sane gx for netrw_gx bug
     -- use {"felipec/vim-sanegx"}
 
     require_plugin("nvim-lspconfig")
@@ -106,7 +117,7 @@ return require("packer").startup(function(use)
     require_plugin("nvim-dap")
     require_plugin("nvim-compe")
     require_plugin("vim-vsnip")
-    require_plugin("nvim-treesitter")
+    -- require_plugin("nvim-treesitter")
     require_plugin("nvim-ts-autotag")
     require_plugin('vim-matchup')
     require_plugin("nvim-tree.lua")
@@ -144,7 +155,7 @@ return require("packer").startup(function(use)
         use {'norcalli/nvim-colorizer.lua', opt = true}
         require_plugin('nvim-colorizer.lua')
         use {'windwp/nvim-spectre', opt = true}
-        require_plugin('windwp/nvim-spectre')
+        require_plugin('nvim-spectre')
         use {'simrat39/symbols-outline.nvim', opt = true}
         require_plugin('symbols-outline.nvim')
         use {'nvim-treesitter/playground', opt = true}

@@ -123,6 +123,7 @@ local mappings = {
         b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
         c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
         C = {"<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)"},
+        x = {"<cmd>GitBlameToggle<cr>", "git blame"},
     },
     l = {
         name = "+Language",
@@ -131,12 +132,14 @@ local mappings = {
         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
         f = {"<cmd>LspFormatting<cr>", "Format"},
-        i = {"<cmd>Telescope lsp_implementations<cr>", "implement"},
+        -- i = {"<cmd>Telescope lsp_implementations<cr>", "implement"},
+        i = {"<cmd>lua vim.lsp.buf.implementation()<cr>", "implement"},
         l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
         L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
         p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
         q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
-        r = {"<cmd>Lspsaga rename<cr>", "Rename"},
+        r = {"<cmd>lua vim.lsp.buf.references()<cr>", "references"},
+        R = {"<cmd>Lspsaga rename<cr>", "Rename"},
         t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
         x = {"<cmd>cclose<cr>", "Close Quickfix"},
         s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
@@ -157,7 +160,16 @@ local mappings = {
         R = {"<cmd>Telescope registers<cr>", "Registers"},
         t = {"<cmd>Telescope live_grep<cr>", "Text"}
     },
-    S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}},
+    S = {
+        name = "+Session", 
+        s = {"<cmd>SessionSave<cr>", "Save Session"}, 
+        l = {"<cmd>SessionLoad<cr>", "Load Session"},
+    },
+    t = {
+        name = "+Test",
+        t = {"<cmd>TestNearest<cr>", "TestNearest"},
+        a = {"<cmd>TestSuite<cr>", "TestSuite"},
+    },
 
     -- extras
     z = {
