@@ -146,6 +146,10 @@ local mappings = {
         S = {"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols"},
         z = {"<cmd>LspInfo<cr>", "Info"},
     },
+    q = {
+        name = "quit",
+        q = {"<cmd>qall<cr>", "quit"},
+    },
     s = {
         name = "+Search",
         b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
@@ -167,8 +171,10 @@ local mappings = {
     },
     t = {
         name = "+Test",
-        t = {"<cmd>TestNearest -v<cr>", "TestNearest"},
-        a = {"<cmd>TestSuite -v<cr>", "TestSuite"},
+        t = {"<cmd>TestNearest -v -cover<cr>", "TestNearest"},
+        a = {"<cmd>TestSuite -v -cover<cr>", "TestSuite"},
+        c = {"<cmd>GoCover<cr>", "go coverage"},
+        C = {"<cmd>GoCoverClear<cr>", "go coverage clear"},
     },
 
     -- extras

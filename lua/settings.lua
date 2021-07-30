@@ -45,3 +45,5 @@ vim.o.guifont = "FiraCode Nerd Font:h17"
 
 vim.g.vimspector_enable_mappings = 'HUMAN'
 vim.g['test#go#rspec#options'] = { nearest= '--v', suite=   '--v' }
+vim.o.background = "dark"
+vim.cmd([[colorscheme gruvbox]])

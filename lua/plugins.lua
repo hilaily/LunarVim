@@ -80,6 +80,7 @@ return require("packer").startup(function(use)
 
     -- Color
     use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
+    use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
     -- Icons
     use {"kyazdani42/nvim-web-devicons", opt = true}
@@ -101,6 +102,8 @@ return require("packer").startup(function(use)
     -- vim test
     use {"vim-test/vim-test", opt=true}
     require_plugin("vim-test")
+    use {"kyoh86/vim-go-coverage", opt=true, ft="go"}
+    require_plugin("vim-go-coverage")
 
     -- Sane gx for netrw_gx bug
     -- use {"felipec/vim-sanegx"}
