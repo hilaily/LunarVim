@@ -175,6 +175,8 @@ local mappings = {
         a = {"<cmd>TestSuite -v -cover<cr>", "TestSuite"},
         c = {"<cmd>GoCover<cr>", "go coverage"},
         C = {"<cmd>GoCoverClear<cr>", "go coverage clear"},
+        b = {"<cmd>lua require'dap'.toggle_breakpoint()<cr>", "set break point"},
+        r = {"<cmd>lua require'dap'.continue()<cr>", "continue"},
     },
 
     -- extras

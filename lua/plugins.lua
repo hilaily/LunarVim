@@ -104,6 +104,7 @@ return require("packer").startup(function(use)
     require_plugin("vim-test")
     use {"kyoh86/vim-go-coverage", opt=true, ft="go"}
     require_plugin("vim-go-coverage")
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
     -- Sane gx for netrw_gx bug
     -- use {"felipec/vim-sanegx"}
