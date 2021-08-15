@@ -23,7 +23,8 @@ require('lv-rnvimr')
 require('lv-which-key')
 require('lv-lsp-rooter')
 require('lv-zen')
-require('lv-nvim-dap')
+-- require('lv-nvim-dap')
+require('dap.go')
 
 -- extras
 if O.extras then

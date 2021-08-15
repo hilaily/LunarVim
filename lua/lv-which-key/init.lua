@@ -84,10 +84,11 @@ local mappings = {
         p = {"<cmd>bp<cr>", "previous buffer"},
         q = {"<cmd>q<cr>", "quit"},
         s = {"<cmd>w<cr>", "save"},
+        r = {"<cmd>e!<cr>", "reload"},
         d = {"<cmd>BufferClose<cr>", "close buffer"},
         z = {"<cmd>CommentToggle<CR>", "toggle comment"},
     },
-    d = {
+    D = {
         name = "+Diagnostics",
         t = {"<cmd>TroubleToggle<cr>", "trouble"},
         w = {"<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "workspace"},
@@ -96,14 +97,32 @@ local mappings = {
         l = {"<cmd>TroubleToggle loclist<cr>", "loclist"},
         r = {"<cmd>TroubleToggle lsp_references<cr>", "references"},
     },
-    D = {
+    d = {
         name = "+Debug",
-        b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
-        c = {"<cmd>DebugContinue<cr>", "Continue"},
-        i = {"<cmd>DebugStepInto<cr>", "Step Into"},
-        o = {"<cmd>DebugStepOver<cr>", "Step Over"},
-        r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
-        s = {"<cmd>DebugStart<cr>", "Start"}
+        -- b = {"<cmd>DebugToggleBreakpoint<cr>", "Toggle Breakpoint"},
+        -- c = {"<cmd>DebugContinue<cr>", "Continue"},
+        -- i = {"<cmd>DebugStepInto<cr>", "Step Into"},
+        -- o = {"<cmd>DebugStepOver<cr>", "Step Over"},
+        -- r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
+        -- s = {"<cmd>DebugStart<cr>", "Start"}
+        d = {"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<cr>", "show diagnostics"},
+
+        c = {"<cmd>lua require'dap'.continue()<cr>", "continue"},
+        b = {':lua require"dap".toggle_breakpoint()<CR>', "Toggle Breadpoint"},
+        j = {':lua require"dap".step_over()<CR>', "step over"},
+        k = {':lua require"dap".step_out()<CR>', "step out"},
+        l = {':lua require"dap".step_into()<CR>',"step into"},
+        --<c-h>', ':lua require"dap".continue()<CR>')
+        u = {':lua require"dap".up()<CR>', "up"},
+        -- d = {':lua require"dap".down()<CR>', "down"},
+        _ = {':lua require"dap".disconnect();require"dap".stop();require"dap".run_last()<CR>', "disconnect"},
+        --r = {':lua require"dap".repl.open({}, "vsplit")<CR><C-w>l', "repl open"},
+        i = {':lua require"dap.ui.variables".visual_hover()<CR>',"visual_hover"},
+        --? = {':lua require"dap.ui.variables".scopes()<CR>',"scopes"},
+        -- e = {':lua require"dap".set_exception_breakpoints({"all"})<CR>',"esception bp"},
+        -- a = {':lua require"debugHelper".attach()<CR>',"attach"},
+        -- A = {':lua require"debugHelper".attachToRemote()<CR>',"attach to remote"},
+        s = {':lua local widgets=require"dap.ui.widgets";widgets.centered_float(widgets.scopes)<CR>',"centered_float"},
     },
     f = {
         name = "+File",
@@ -171,8 +190,9 @@ local mappings = {
     },
     t = {
         name = "+Test",
-        t = {"<cmd>TestNearest -v -cover<cr>", "TestNearest"},
         a = {"<cmd>TestSuite -v -cover<cr>", "TestSuite"},
+        t = {"<cmd>TestNearest -v -cover<cr>", "TestNearest"},
+        f = {"<cmd>TestFile -v -cover<cr>", "TestFile"},
         c = {"<cmd>GoCover<cr>", "go coverage"},
         C = {"<cmd>GoCoverClear<cr>", "go coverage clear"},
         b = {"<cmd>lua require'dap'.toggle_breakpoint()<cr>", "set break point"},

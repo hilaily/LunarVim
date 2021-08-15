@@ -140,6 +140,11 @@ return require("packer").startup(function(use)
     require_plugin("TrueZen.nvim")
     require_plugin("nvim-ts-context-commentstring")
 
+	use {'nvim-telescope/telescope-dap.nvim', opt=true}
+    require_plugin("telescope-dap.nvim")
+	use {'theHamsta/nvim-dap-virtual-text', opt=true}
+    require_plugin("nvim-dap-virtual-text")
+
     -- Extras
     if O.extras then
         use {'metakirby5/codi.vim', opt = true}
