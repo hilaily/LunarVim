@@ -145,6 +145,10 @@ return require("packer").startup(function(use)
 	use {'theHamsta/nvim-dap-virtual-text', opt=true}
     require_plugin("nvim-dap-virtual-text")
 
+    use { "ray-x/lsp_signature.nvim"}
+    use 'tanvirtin/monokai.nvim'
+    use 'fratajczak/one-monokai-vim'
+
     -- Extras
     if O.extras then
         use {'metakirby5/codi.vim', opt = true}

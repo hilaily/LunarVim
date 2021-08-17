@@ -128,6 +128,8 @@ local mappings = {
         name = "+File",
         s = {"<cmd>w<cr>", "save file"},
         t = {"<cmd>NvimTreeToggle<cr>", "toggle nvim tree"},
+        y = {"<cmd>let @+ = expand('%:p')<cr>", "copy the file path"},
+        -- T = {"<cmd>let @+ = 'go test -v -run='+expand('<cword>')<cr>", "get current word in go test"},
     },
     g = {
         name = "+Git",
