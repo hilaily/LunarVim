@@ -48,5 +48,6 @@ vim.g['test#go#rspec#options'] = { nearest= '--v', suite=   '--v' }
 vim.o.background = "dark"
 require('monokai')
 vim.cmd('colorscheme monokai_pro')
+--require('nightfox').set()
 --vim.cmd('colorscheme one-monokai')
 --vim.cmd([[colorscheme gruvbox]])

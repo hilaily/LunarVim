@@ -148,6 +148,11 @@ return require("packer").startup(function(use)
     use { "ray-x/lsp_signature.nvim"}
     use 'tanvirtin/monokai.nvim'
     use 'fratajczak/one-monokai-vim'
+    use {"npxbr/glow.nvim", run = "GlowInstall"}
+
+    use {"akinsho/nvim-toggleterm.lua"}
+
+    --use 'EdenEast/nightfox.nvim'
 
     -- Extras
     if O.extras then

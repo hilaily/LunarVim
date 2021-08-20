@@ -63,5 +63,6 @@ require('lsp.rust-ls')
 -- require('lsp.vue-ls')
 require('lsp.yaml-ls')
 -- require('lsp.elixir-ls')
+require('term')
 
 require("lsp_signature").setup()

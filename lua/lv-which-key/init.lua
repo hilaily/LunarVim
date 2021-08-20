@@ -54,7 +54,7 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- telescope
-vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
@@ -155,9 +155,12 @@ local mappings = {
         f = {"<cmd>LspFormatting<cr>", "Format"},
         -- i = {"<cmd>Telescope lsp_implementations<cr>", "implement"},
         i = {"<cmd>lua vim.lsp.buf.implementation()<cr>", "implement"},
-        l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
+        F = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
         L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
-        p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
+        l = {"<cmd>lua vim.lsp.buf.hover()<cr>", "hover"},
+        P = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
+        n = {"<cmd>lua vim.lsp.diagnostic.goto_next()<cr>", "next diagnostic"},
+        p = {"<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "prev diagnostic"},
         q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
         r = {"<cmd>lua vim.lsp.buf.references()<cr>", "references"},
         R = {"<cmd>Lspsaga rename<cr>", "Rename"},

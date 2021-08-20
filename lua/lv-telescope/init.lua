@@ -36,6 +36,7 @@ require('telescope').setup {
         mappings = {
             i = {
                 ["<C-c>"] = actions.close,
+                ["<ESC>"] = actions.close,
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
                 ["<c-t>"] = trouble.open_with_trouble,
