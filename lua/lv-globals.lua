@@ -3,20 +3,9 @@ DATA_PATH = vim.fn.stdpath('data')
 CACHE_PATH = vim.fn.stdpath('cache')
 
 O = {
-	timeoutlen = 100,
-    nvim_tree_disable_netrw = 0,
     extras = false,
 
-    -- @usage pass a table with your desired languages
-    treesitter = {
-        ensure_installed = "all",
-        ignore_install = {"haskell"},
-        highlight = {enabled = true},
-        playground = {enabled = true},
-        rainbow = {enabled = false}
-    },
-
-    database = {save_location = '~/.config/nvcode_db', auto_execute = 1},
+    --database = {save_location = '~/.config/nvcode_db', auto_execute = 1},
     python = {
         linter = '',
         -- @usage can be 'yapf', 'black'
