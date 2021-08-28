@@ -89,8 +89,6 @@ return require("packer").startup(function(use)
     use {"glepnir/galaxyline.nvim", opt = true}
     use {"romgrk/barbar.nvim", opt = true}
 
-    -- Zen Mode
-    use {"Pocco81/TrueZen.nvim", opt = true}
     -- Go plugin
     -- use {"fatih/vim-go", run= ":GoUpdateBinaries"}
     -- use {"fatih/vim-go", run = ":GoUpdateBinaries", ft = "go"}
