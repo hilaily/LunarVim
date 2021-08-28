@@ -20,10 +20,6 @@ O.extras = true
 -- O.dashboard.custom_header = {""}
 -- O.dashboard.footer = {""}
 
--- if you don't want all the parsers change this to a table of the ones you want
-O.treesitter.ensure_installed = "all"
-O.treesitter.ignore_install = {"haskell"}
-O.treesitter.highlight.enabled = true
 
 
 O.clang.diagnostics.virtual_text = false
