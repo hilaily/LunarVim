@@ -1,3 +1,7 @@
+CONFIG_PATH = vim.fn.stdpath('config')
+DATA_PATH = vim.fn.stdpath('data')
+CACHE_PATH = vim.fn.stdpath('cache')
+
 require('lv-globals')
 vim.cmd('luafile '..CONFIG_PATH..'/lv-settings.lua')
 require('settings')
@@ -18,8 +22,6 @@ require('lv-gitsigns')
 require('lv-autopairs')
 require('lv-rnvimr')
 require('lv-lsp-rooter')
--- require('lv-nvim-dap')
-require('dap.go')
 
 -- extras
 if O.extras then
@@ -37,27 +39,18 @@ vim.cmd('source '..CONFIG_PATH..'/vimscript/functions.vim')
 
 -- LSP
 require('lsp')
-require('lsp.bash-ls')
+
+--[[
 require('lsp.css-ls')
 require('lsp.docker-ls')
 require('lsp.emmet-ls')
-require('lsp.go-ls')
 require('lsp.html-ls')
 require('lsp.json-ls')
-require('lsp.js-ts-ls')
--- require('lsp.kotlin-ls')
 require('lsp.latex-ls')
-require('lsp.lua-ls')
--- require('lsp.php-ls')
 require('lsp.python-ls')
--- require('lsp.ruby-ls')
 require('lsp.rust-ls')
--- require('lsp.svelte-ls')
--- require('lsp.terraform-ls')
--- require('lsp.tailwindcss-ls')
--- require('lsp.vue-ls')
 require('lsp.yaml-ls')
--- require('lsp.elixir-ls')
+]]
 require('term')
 
 require("lsp_signature").setup()

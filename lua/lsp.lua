@@ -106,10 +106,10 @@ if O.document_highlight then
     end
 end
 
-function lsp_config.tsserver_on_attach(client, bufnr)
-    lsp_config.common_on_attach(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
-end
+--function lsp_config.tsserver_on_attach(client, bufnr)
+--    lsp_config.common_on_attach(client, bufnr)
+--    client.resolved_capabilities.document_formatting = false
+--end
 
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches

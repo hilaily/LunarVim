@@ -1,7 +1,3 @@
-CONFIG_PATH = vim.fn.stdpath('config')
-DATA_PATH = vim.fn.stdpath('data')
-CACHE_PATH = vim.fn.stdpath('cache')
-
 O = {
     extras = false,
 
@@ -57,7 +53,4 @@ O = {
 	}
 
 
--- last position jump
-vim.cmd([[
-autocmd BufReadPost *  if line("'\"") >= 1 && line("'\"") <= line("$") | exe "normal! g`\"" |  endif
-]])
+
