@@ -2,3 +2,4 @@ require('pluginconfig/nvim-tree') -- This plugin must be required somewhere befo
 require('pluginconfig/nvim-compe')
 require('pluginconfig/which-key')
 require('pluginconfig/nvim-treesitter')
+require('pluginconfig/dashboard-nvim')

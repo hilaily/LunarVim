@@ -1,11 +1,28 @@
--- vim.g.dashboard_custom_header = {
---     '███╗   ██╗██╗   ██╗ ██████╗ ██████╗ ██████╗ ███████╗',
---     '████╗  ██║██║   ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝',
---     '██╔██╗ ██║██║   ██║██║     ██║   ██║██║  ██║█████╗',
---     '██║╚██╗██║╚██╗ ██╔╝██║     ██║   ██║██║  ██║██╔══╝',
---     '██║ ╚████║ ╚████╔╝ ╚██████╗╚██████╔╝██████╔╝███████╗',
---     '╚═╝  ╚═══╝  ╚═══╝   ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝'
--- }
+--[[
+local dashboard = {
+		custom_header = {
+'                 _..._                                                                           ',
+'               .\'   (_`.    _                         __     ___           ',
+'              :  .      :  | |   _   _ _ __   __ _ _ _\\ \\   / (_)_ __ ___  ',
+'              :)    ()  :  | |  | | | | \'_ \\ / _` | \'__\\ \\ / /| | \'_ ` _ \\ ',
+'              `.   .   .\'  | |__| |_| | | | | (_| | |   \\ V / | | | | | | |',
+'                `-...-\'    |_____\\__,_|_| |_|\\__,_|_|    \\_/  |_|_| |_| |_|',
+		},
+		footer= {'Laily'}
+}
+]]
+
+local dashboard = {
+    custom_header = {
+     '███╗   ██╗██╗   ██╗ ██████╗ ██████╗ ██████╗ ███████╗',
+     '████╗  ██║██║   ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝',
+     '██╔██╗ ██║██║   ██║██║     ██║   ██║██║  ██║█████╗',
+     '██║╚██╗██║╚██╗ ██╔╝██║     ██║   ██║██║  ██║██╔══╝',
+     '██║ ╚████║ ╚████╔╝ ╚██████╗╚██████╔╝██████╔╝███████╗',
+     '╚═╝  ╚═══╝  ╚═══╝   ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝'
+        },
+		footer= {'Laily'},
+ }
 -- vim.g.dashboard_custom_header = {
 --
 -- '      _..._                                                                           ',
@@ -17,7 +34,7 @@
 --
 -- }
 
-vim.g.dashboard_custom_header = O.dashboard.custom_header
+vim.g.dashboard_custom_header = dashboard.custom_header
 
 vim.g.dashboard_default_executive = 'telescope'
 
@@ -42,4 +59,5 @@ vim.g.dashboard_custom_section = {
 -- find_history = 'SPC f h',
 
 -- vim.g.dashboard_session_directory = CACHE_PATH..'/session'
-vim.g.dashboard_custom_footer = O.dashboard.footer
+vim.g.dashboard_custom_footer = dashboard.footer
+
