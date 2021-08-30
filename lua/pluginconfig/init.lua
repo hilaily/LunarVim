@@ -4,6 +4,8 @@ require('pluginconfig/which-key')
 require('pluginconfig/nvim-treesitter')
 require('pluginconfig/dashboard-nvim')
 require('pluginconfig/git-blame')
+require('pluginconfig/telescope')
+require('pluginconfig/toggleterm')
 
 
 -- nvim_comment
@@ -15,3 +17,6 @@ require("lsp-rooter").setup {
   -- or leave it empty to use the default settings
   -- refer to the configuration section below
 }
+
+-- lsp signature
+require("lsp_signature").setup()

@@ -14,7 +14,6 @@ require('keymappings')
 require('colorscheme') -- This plugin must be required somewhere after nvimtree. Placing it before will break navigation keymappings
 require('lv-galaxyline')
 require('lv-barbar')
-require('lv-telescope')
 require('lv-gitsigns')
 require('lv-autopairs')
 require('lv-rnvimr')
@@ -47,6 +46,4 @@ require('lsp.python-ls')
 require('lsp.rust-ls')
 require('lsp.yaml-ls')
 ]]
-require('term')
 
-require("lsp_signature").setup()
