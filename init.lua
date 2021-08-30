@@ -1,30 +1,26 @@
 CONFIG_PATH = vim.fn.stdpath('config')
 DATA_PATH = vim.fn.stdpath('data')
 CACHE_PATH = vim.fn.stdpath('cache')
+P = vim.inspect
 
 require('lv-globals')
 vim.cmd('luafile '..CONFIG_PATH..'/lv-settings.lua')
 require('settings')
-require('lv-matchup')
 require('plugins')
 require('lv-utils')
 require('pluginconfig')
 require('lv-autocommands')
 require('keymappings')
 require('colorscheme') -- This plugin must be required somewhere after nvimtree. Placing it before will break navigation keymappings
-require('lv-galaxyline')
 require('lv-barbar')
-require('lv-gitsigns')
 require('lv-autopairs')
 require('lv-rnvimr')
 
 -- extras
 if O.extras then
-    require('lv-numb')
     require('lv-dial')
     require('lv-hop')
     require('lv-colorizer')
-    require('lv-symbols-outline')
 end
 
 

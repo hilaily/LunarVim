@@ -6,6 +6,11 @@ require('pluginconfig/dashboard-nvim')
 require('pluginconfig/git-blame')
 require('pluginconfig/telescope')
 require('pluginconfig/toggleterm')
+require('pluginconfig/lspinstall')
+require('pluginconfig/galaxyline')
+require('pluginconfig/gitsigns')
+require('pluginconfig/numb')
+require('pluginconfig/symbols-outline')
 
 
 -- nvim_comment
