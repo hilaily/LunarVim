@@ -3,3 +3,15 @@ require('pluginconfig/nvim-compe')
 require('pluginconfig/which-key')
 require('pluginconfig/nvim-treesitter')
 require('pluginconfig/dashboard-nvim')
+require('pluginconfig/git-blame')
+
+
+-- nvim_comment
+require('nvim_comment').setup()
+
+-- lsp-rooter
+require("lsp-rooter").setup {
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  -- refer to the configuration section below
+}
