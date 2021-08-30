@@ -1,16 +1,19 @@
-require('pluginconfig/nvim-tree') -- This plugin must be required somewhere before colorscheme.  Placing it after will break navigation keymappings
-require('pluginconfig/nvim-compe')
-require('pluginconfig/which-key')
-require('pluginconfig/nvim-treesitter')
+-- source plugin config
+
 require('pluginconfig/dashboard-nvim')
+require('pluginconfig/galaxyline')
 require('pluginconfig/git-blame')
+require('pluginconfig/gitsigns')
+require('pluginconfig/lspinstall')
+require('pluginconfig/numb')
+require('pluginconfig/nvim-compe')
+require('pluginconfig/nvim-tree') -- This plugin must be required somewhere before colorscheme.  Placing it after will break navigation keymappings
+require('pluginconfig/nvim-treesitter')
+require('pluginconfig/symbols-outline')
 require('pluginconfig/telescope')
 require('pluginconfig/toggleterm')
-require('pluginconfig/lspinstall')
-require('pluginconfig/galaxyline')
-require('pluginconfig/gitsigns')
-require('pluginconfig/numb')
-require('pluginconfig/symbols-outline')
+require('pluginconfig/vim-matchup')
+require('pluginconfig/which-key')
 
 
 -- nvim_comment
