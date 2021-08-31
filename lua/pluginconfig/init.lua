@@ -1,14 +1,19 @@
 -- source plugin config
 
+require('pluginconfig/barbar')
 require('pluginconfig/dashboard-nvim')
 require('pluginconfig/galaxyline')
 require('pluginconfig/git-blame')
 require('pluginconfig/gitsigns')
+require('pluginconfig/hop')
 require('pluginconfig/lspinstall')
 require('pluginconfig/numb')
+require('pluginconfig/nvim-autopairs')
+require('pluginconfig/nvim-colorizer')
 require('pluginconfig/nvim-compe')
 require('pluginconfig/nvim-tree') -- This plugin must be required somewhere before colorscheme.  Placing it after will break navigation keymappings
 require('pluginconfig/nvim-treesitter')
+require('pluginconfig/rnvimr')
 require('pluginconfig/symbols-outline')
 require('pluginconfig/telescope')
 require('pluginconfig/toggleterm')

@@ -107,6 +107,7 @@ return require("packer").startup(function(use)
     -- Sane gx for netrw_gx bug
     -- use {"felipec/vim-sanegx"}
 
+
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
     require_plugin("nvim-lspinstall")
@@ -135,7 +136,6 @@ return require("packer").startup(function(use)
     require_plugin("galaxyline.nvim")
     require_plugin("barbar.nvim")
     require_plugin('lsp-rooter.nvim')
-    require_plugin("TrueZen.nvim")
     require_plugin("nvim-ts-context-commentstring")
 
 	use {'nvim-telescope/telescope-dap.nvim', opt=true}
@@ -160,8 +160,6 @@ return require("packer").startup(function(use)
         require_plugin('markdown-preview.nvim')
         use {'numToStr/FTerm.nvim', opt = true}
         require_plugin('FTerm.nvim')
-        use {'monaqa/dial.nvim', opt = true}
-        require_plugin('dial.nvim')
         use {'nacro90/numb.nvim', opt = true}
         require_plugin('numb.nvim')
         use {'turbio/bracey.vim', run = 'npm install --prefix server', opt = true}

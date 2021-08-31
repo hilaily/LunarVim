@@ -80,8 +80,8 @@ local mappings = {
     ["p"] = "Projects",
     b = {
         name = "+Buffer",
-        n = {"<cmd>bn<cr>", "next buffer"},
-        p = {"<cmd>bp<cr>", "previous buffer"},
+        n = {"<cmd>BufferNext<cr>", "next buffer"},
+        p = {"<cmd>BufferPrevious<cr>", "previous buffer"},
         q = {"<cmd>q<cr>", "quit"},
         s = {"<cmd>w<cr>", "save"},
         r = {"<cmd>e!<cr>", "reload"},
@@ -128,6 +128,7 @@ local mappings = {
         name = "+File",
         s = {"<cmd>w<cr>", "save file"},
         t = {"<cmd>NvimTreeToggle<cr>", "toggle nvim tree"},
+        r = {"<cmd>RnvimrToggle<cr>", "toggle rnvimr"},
         y = {"<cmd>let @+ = expand('%:p')<cr>", "copy the file path"},
         -- T = {"<cmd>let @+ = 'go test -v -run='+expand('<cword>')<cr>", "get current word in go test"},
     },
