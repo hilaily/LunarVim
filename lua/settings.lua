@@ -52,6 +52,10 @@ vim.cmd('colorscheme monokai_pro')
 --vim.cmd('colorscheme one-monokai')
 --vim.cmd([[colorscheme gruvbox]])
 
+-- git blame
+vim.cmd('highlight default link gitblame SpecialComment')
+vim.g.gitblame_enabled = 0
+
 -- last position jump
 vim.cmd([[
 autocmd BufReadPost *  if line("'\"") >= 1 && line("'\"") <= line("$") | exe "normal! g`\"" |  endif

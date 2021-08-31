@@ -4,7 +4,7 @@ CACHE_PATH = vim.fn.stdpath('cache')
 P = vim.inspect
 
 require('lv-globals')
-vim.cmd('luafile '..CONFIG_PATH..'/lv-settings.lua')
+vim.cmd('luafile '..CONFIG_PATH..'/settings.lua')
 require('settings')
 require('plugins')
 require('utils')
