@@ -3,7 +3,6 @@
 require('pluginconfig/barbar')
 require('pluginconfig/dashboard-nvim')
 require('pluginconfig/galaxyline')
-require('pluginconfig/git-blame')
 require('pluginconfig/gitsigns')
 require('pluginconfig/hop')
 require('pluginconfig/lspinstall')
