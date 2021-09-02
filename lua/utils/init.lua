@@ -1,5 +1,13 @@
 local lv_utils = {}
 
+
+-- copy current filepath to clipboard
+function lv_utils.yank_filepath()
+    local p = vim.fn.expand('%:p')
+    print(p)
+    vim.fn.setreg('+',p)
+end
+
 function lv_utils.define_augroups(definitions) -- {{{1
     -- Create autocommand groups based on the passed definitions
     --
