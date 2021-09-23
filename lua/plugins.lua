@@ -147,6 +147,8 @@ return require("packer").startup(function(use)
     use {"npxbr/glow.nvim", run = "GlowInstall"}
 
     use {"akinsho/nvim-toggleterm.lua"}
+    use {"Pocco81/DAPInstall.nvim", opt=true}
+    require_plugin("DAPInstall.nvim")
 
     --use 'EdenEast/nightfox.nvim'
 
