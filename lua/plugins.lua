@@ -61,7 +61,12 @@ return require("packer").startup(function(use)
     use {'andymass/vim-matchup', opt = true}
 
     -- Explorer
-    use {"kyazdani42/nvim-tree.lua", opt = true}
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons',
+        opt = true,
+        config = function() require'nvim-tree'.setup {} end
+    }
     use {"ahmedkhalf/lsp-rooter.nvim", opt = true} -- with this nvim-tree will follow you
     -- TODO remove when open on dir is supported by nvimtree
     use "kevinhwang91/rnvimr"
@@ -151,13 +156,17 @@ return require("packer").startup(function(use)
     require_plugin("DAPInstall.nvim")
 
     --use 'EdenEast/nightfox.nvim'
+    -- use {'godlygeek/tabular', opt=true}
+    -- use {'plasticboy/vim-markdown', opt=true}
+    -- require_plugin("tabular")
+    -- require_plugin("vim-markdown")
 
     -- Extras
     if O.extras then
         use {'metakirby5/codi.vim', opt = true}
         require_plugin('codi.vim')
-        use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install', opt = true}
-        require_plugin('markdown-preview.nvim')
+        --use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install', opt = true}
+        --require_plugin('markdown-preview.nvim')
         use {'numToStr/FTerm.nvim', opt = true}
         require_plugin('FTerm.nvim')
         use {'nacro90/numb.nvim', opt = true}
