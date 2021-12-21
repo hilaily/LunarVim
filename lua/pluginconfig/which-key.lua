@@ -54,7 +54,7 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- telescope
-vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-p>', ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
@@ -67,7 +67,7 @@ vim.api.nvim_set_keymap("v", "<Leader>b/", ":CommentToggle<CR>", {noremap = true
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
 
 -- open projects
-vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>", {noremap = true, silent = true})
+--vim.api.nvim_set_keymap('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>", {noremap = true, silent = true})
 -- vim.api.nvim_set_keymap('n', '<leader>p', ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true, silent = true})
 -- TODO create entire treesitter section
 
