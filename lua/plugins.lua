@@ -46,6 +46,7 @@ return require("packer").startup(function(use)
     use {"nvim-telescope/telescope.nvim", opt = true}
     use {"nvim-telescope/telescope-fzy-native.nvim", opt = true}
     use {"nvim-telescope/telescope-project.nvim", opt = true}
+    use { "nvim-telescope/telescope-file-browser.nvim" }
 
     -- Debugging
     use {"mfussenegger/nvim-dap", opt = true}

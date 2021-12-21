@@ -3,6 +3,15 @@ require'nvim-tree'.setup {
     disable_netrw = true,
     hijack_netrw = true,
     auto_close = false,
+    filters = {
+        dotfiles = false,
+        custom = {}
+    },
+    git = {
+        enable = true,
+        ignore = false,
+        timeout = 500,
+    },
     update_focused_file = {
         -- enables the feature
         enable      = true,
@@ -70,7 +79,6 @@ let g:nvim_tree_show_icons = {
 "If 0, do not show the icons for one of 'git' 'folder' and 'files'
 "1 by default, notice that if 'files' is 1, it will only display
 "if nvim-web-devicons is installed and on your runtimepath ]] -- vim.g.nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
-vim.g.nvim_tree_hide_dotfiles = 1 -- 0 by default, this option hides files and folders starting with a dot `.`
 vim.g.nvim_tree_indent_markers = 1 -- "0 by default, this option shows indent markers when folders are open
 -- vim.g.nvim_tree_auto_open = 1 -- ""
 vim.g.nvim_tree_auto_ignore_ft = 'startify' --empty by default, don't auto open tree on specific filetypes.
