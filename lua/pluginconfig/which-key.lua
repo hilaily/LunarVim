@@ -54,7 +54,8 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- telescope
-vim.api.nvim_set_keymap('n', '<C-p>', ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true, silent = true})
+--vim.api.nvim_set_keymap('n', '<C-p>', ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-p>', ":lua require'telescope.builtin'.find_files()<CR>", {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
@@ -129,6 +130,7 @@ local mappings = {
         t = {"<cmd>NvimTreeToggle<cr>", "toggle nvim tree"},
         r = {"<cmd>RnvimrToggle<cr>", "toggle rnvimr"},
         y = {"<cmd>lua require'utils'.yank_filepath()<cr>", "copy the file path"},
+        l = {"<cmd>NvimTreeFindFile<CR>", "find file"},
         -- T = {"<cmd>let @+ = 'go test -v -run='+expand('<cword>')<cr>", "get current word in go test"},
     },
     g = {
