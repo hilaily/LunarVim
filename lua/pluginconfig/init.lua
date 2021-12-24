@@ -10,6 +10,7 @@ require('pluginconfig/numb')
 require('pluginconfig/nvim-autopairs')
 require('pluginconfig/nvim-colorizer')
 require('pluginconfig/nvim-compe')
+require('pluginconfig/fzf-lua')
 require('pluginconfig/nvim-tree') -- This plugin must be required somewhere before colorscheme.  Placing it after will break navigation keymappings
 require('pluginconfig/nvim-treesitter')
 require('pluginconfig/rnvimr')
