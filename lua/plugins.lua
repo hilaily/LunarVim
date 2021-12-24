@@ -44,9 +44,14 @@ return require("packer").startup(function(use)
     use {"nvim-lua/popup.nvim", opt = true}
     use {"nvim-lua/plenary.nvim", opt = true}
     use {"nvim-telescope/telescope.nvim", opt = true}
-    use {"nvim-telescope/telescope-fzy-native.nvim", opt = true}
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use {"nvim-telescope/telescope-project.nvim", opt = true}
     use { "nvim-telescope/telescope-file-browser.nvim" }
+
+    use { 'ibhagwan/fzf-lua',
+        -- optional for icon support
+        requires = { 'kyazdani42/nvim-web-devicons' }
+    }
 
     -- Debugging
     use {"mfussenegger/nvim-dap", opt = true}

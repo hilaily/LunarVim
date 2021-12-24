@@ -55,7 +55,8 @@ vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true
 
 -- telescope
 --vim.api.nvim_set_keymap('n', '<C-p>', ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<C-p>', ":lua require'telescope.builtin'.find_files()<CR>", {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<C-p>', ":lua require'telescope.builtin'.find_files()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-p>', ":FzfLua files<CR>", {noremap = true, silent = true})
 
 -- dashboard
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
@@ -201,12 +202,13 @@ local mappings = {
         c = {"<cmd>:nohl<cr>", "no highlight"},
         d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
         D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        f = {"<cmd>Telescope find_files<cr>", "Find File"},
+        f = {"<cmd>Fzflua files<cr>", "Find File"},
         m = {"<cmd>Telescope marks<cr>", "Marks"},
         M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
-        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
+        r = {"<cmd>FzfLua oldfiles<cr>", "Open Recent File"},
         R = {"<cmd>Telescope registers<cr>", "Registers"},
-        t = {"<cmd>Telescope grep_string<cr>", "Text"}
+        t = {"<cmd>FzfLua live_grep<cr>", "Text"},
+        ["#"] = {"<cmd>FzfLua grep_cword<cr>", "Search word under cursor"},
     },
     S = {
         name = "+Session", 
