@@ -53,6 +53,9 @@ return require("packer").startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons' }
     }
 
+    use {'folke/lua-dev.nvim'}
+    use {"rafcamlet/nvim-luapad"}
+
     -- Debugging
     use {"mfussenegger/nvim-dap", opt = true}
 

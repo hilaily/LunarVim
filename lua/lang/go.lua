@@ -14,6 +14,39 @@ local dap = require "dap"
 vim.fn.sign_define('DapBreakpoint', {text='🟥', texthl='', linehl='', numhl=''})
 --vim.fn.sign_define('DapStopped', {text='⭐️', texthl='', linehl='', numhl=''})
 
+local M = {}
+
+local ts_utils = require 'nvim-treesitter.ts_utils'
+
+function M.get_node()
+  local n = ts_utils.get_node_at_cursor()
+  put(ts_utils.get_node_text(n))
+end
+
+function M.get_node2()
+    local current_node = ts_utils.get_node_at_cursor()
+    if not current_node then
+        return ""
+    end
+
+    local expr = current_node
+
+    while expr do
+        if expr:type() == 'function_definition' then
+            put(expr:type())
+            break
+        end
+        expr = expr:parent()
+    end
+
+    if not expr then return "" end
+
+    put(ts_utils.get_node_text(expr))
+    return (ts_utils.get_node_text(expr:child(1)))[1]
+end
+
+return M
+
 --[[
 -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
 dap.configurations.go = {
@@ -23,7 +56,21 @@ dap.configurations.go = {
         request = "launch",
         program = "${file}"
     },
-    -- works with go.mod packages and sub packages 
+    -- works with go.mod packages and sub packagesfunction M.get_current_function_name() local current_node = ts_utils.get_node_at_cursor() if not current_node then return "" end
+
+local expr = current_node
+
+while expr do
+    if expr:type() == 'function_definition' then
+        break
+    end
+    expr = expr:parent()
+end
+
+if not expr then return "" end
+
+return (ts_utils.get_node_text(expr:child(1)))[1]
+end 
     {
         type = "go",
         name = "Debug test (go.mod)",
