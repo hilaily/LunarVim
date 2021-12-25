@@ -79,6 +79,10 @@ local mappings = {
     ["e"] = "Explorer",
     -- ["f"] = "Find File",
     ["h"] = "No Highlight",
+    a = {
+        name = "+Action",
+        a = {"<cmd>@:<cr>","execute last command again"}
+    },
     b = {
         name = "+Buffer",
         n = {"<cmd>BufferNext<cr>", "next buffer"},
